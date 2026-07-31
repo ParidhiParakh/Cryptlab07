@@ -1,3 +1,4 @@
+from analysis.file_analysis import analyze_file
 def show_menu():
     """
     Prints the menu options to the screen.
@@ -15,7 +16,9 @@ def main():
     This is the "engine" of the program: it keeps showing the menu and
     reacting to the user's choice until they choose to exit.
     """
- 
+    def analyze():
+    filename = input("Enter filename (example: sample1.txt): ")
+    analyze_file(filename)
     while True:
         show_menu()
  
@@ -29,7 +32,7 @@ def main():
         elif choice == "3":
             print("Attack -> Coming Soon")
         elif choice == "4":
-            print("Analyze -> Coming Soon")
+            analyze()
         elif choice == "5":
             print("Exiting CryptoLabX. Goodbye!")
             break
