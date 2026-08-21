@@ -1,0 +1,61 @@
+STUDENT PORTAL TEST CASES
+
+TC01 - Student Login
+Input:
+Username: alice
+Password: alice123
+Expected:
+Login successful.
+
+TC02 - Student Registration
+Input:
+New username: bob
+Password: bob123
+Name: Bob
+Email: bob@gmail.com
+Expected:
+Student registered successfully.
+
+TC03 - View Courses
+Expected:
+Available courses are displayed.
+
+TC04 - Register Course
+Input:
+Course ID: 1
+Expected:
+Course registered successfully.
+
+TC05 - View Grades
+Expected:
+Logged-in student's grade is displayed.
+
+TC06 - Update Profile
+Input:
+New name and email.
+Expected:
+Profile is updated.
+
+TC07 - SQL Injection
+Input:
+Username: ' OR '1'='1
+Password: ' OR '1'='1
+Expected:
+Application should reject malicious input.
+Actual vulnerable behavior:
+Login may succeed because input is directly inserted into SQL.
+
+TC08 - IDOR / Missing Authorization
+Attempt to access another student's record.
+Expected secure behavior:
+Access should be denied.
+Vulnerable behavior:
+Application does not properly verify ownership of the requested student ID.
+
+TC09 - Malicious Profile Input
+Input:
+<script>alert('XSS')</script>
+Expected secure behavior:
+Input should be rejected or safely encoded.
+Vulnerable behavior:
+Malicious input can be stored without validation.
