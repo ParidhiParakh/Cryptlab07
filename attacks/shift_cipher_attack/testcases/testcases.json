@@ -1,0 +1,38 @@
+[
+  {
+    "id": "TC1_pangram",
+    "description": "Classic pangram, medium length, common words only.",
+    "plaintext": "The quick brown fox jumps over the lazy dog",
+    "key": 3
+  },
+  {
+    "id": "TC2_long_paragraph",
+    "description": "Longer paragraph so letter-frequency statistics are stable.",
+    "plaintext": "Cryptography is the practice and study of techniques for secure communication in the presence of adversarial behavior. More generally cryptography is about constructing and analyzing protocols that prevent third parties from reading private messages",
+    "key": 19
+  },
+  {
+    "id": "TC3_short_phrase",
+    "description": "Very short phrase, only a few words, to stress-test both attacks.",
+    "plaintext": "meet me now",
+    "key": 11
+  },
+  {
+    "id": "TC4_proper_nouns",
+    "description": "Sentence dominated by proper nouns / a name, few common dictionary words.",
+    "plaintext": "Rahul met Priyanka near Jaipur railway station",
+    "key": 15
+  },
+  {
+    "id": "TC5_common_sentence",
+    "description": "Simple everyday sentence, moderate length.",
+    "plaintext": "We will attack at dawn from the east side of the castle",
+    "key": 22
+  },
+  {
+    "id": "TC6_single_word",
+    "description": "Single short word only, minimal signal for both attacks.",
+    "plaintext": "hello",
+    "key": 9
+  }
+]
